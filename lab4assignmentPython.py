@@ -5,13 +5,22 @@ class Employee:
         self.age = age
         self.salary = salary
 
+def sort_by_age(emp):
+    return emp.age
+
+def sort_by_name(emp):
+    return emp.name
+
+def sort_by_salary(emp):
+    return emp.salary
+
 def sort_employee_data(employees, sort_parameter):
     if sort_parameter == 1:
-        employees.sort(key=lambda emp: emp.age)
+        employees.sort(key=sort_by_age)
     elif sort_parameter == 2:
-        employees.sort(key=lambda emp: emp.name)
+        employees.sort(key=sort_by_name)
     elif sort_parameter == 3:
-        employees.sort(key=lambda emp: emp.salary)
+        employees.sort(key=sort_by_salary)
     else:
         print("Invalid sorting parameter")
 
